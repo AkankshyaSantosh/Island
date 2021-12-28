@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Island</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  </head>
+  <body>
+
+    <header>
+      <a href="#" class="brand">Nature</a>
+      <div class="menu-btn"></div>
+      <div class="navigation">
+        <div class="navigation-items">
+          <a href="#">Home</a>
+          <a href="https://akankshyasantosh.github.io/About_me/">About</a>
+          <a href="https://www.planetware.com/world/most-beautiful-islands-in-the-world-sey-1-2.htm">Explore</a>
+          <a href="https://akankshyasantosh.github.io/Photo_gallery/">Gallery</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="home">
+      <video class="video-slide active" src="https://assets.mixkit.co/videos/preview/mixkit-top-aerial-shot-of-seashore-with-rocks-1090-large.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="https://cdn.videvo.net/videvo_files/video/free/2019-08/large_watermarked/190712_Cornwall_HD_09_preview.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="https://cdn.videvo.net/videvo_files/video/free/2017-08/large_watermarked/170724_02_Flyingoverpalms_preview.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="https://cdn.videvo.net/videvo_files/video/free/2017-08/large_watermarked/170724_15_Setangibeach_preview.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="https://assets.mixkit.co/videos/preview/mixkit-waves-crash-on-a-shore-with-boulders-1088-large.mp4" autoplay muted loop></video>
+      <div class="content active">
+        <h1>Wonderful.<br><span>Island</span></h1>
+        <p>Our travel itch takes us to all sorts of places: historic, forests, and mountains. But in reality, our wandering soul craves for the discovery of the islands, isn’t it? Surrounded by a mysterious aura, the islands cast a magical spell on the travelers. From exotic flora and fauna to turquoise-blue ocean and mesmerizing sunset views to moon-lit walks on the beach - an island holiday will reward you with incredible memories</p>
+        <a href="https://in.musafir.com/Blog/6-reasons-why-you-should-go-for-an-island-vacation">Read More</a>
+      </div>
+      <div class="content">
+        <h1>Camping.<br><span>Enjoy</span></h1>
+        <p>Whether you're a die-hard camping fan, looking for a low-cost break, or reliving childhood memories, camping is a great way to get outdoors and spend quality time with friends, family, or on your own. Exploring the great outdoors and getting back in touch with nature brings some real health benefits too.</p>
+        <a href="https://ourauckland.aucklandcouncil.govt.nz/news/2019/12/seven-health-benefits-of-camping/">Read More</a>
+      </div>
+      <div class="content">
+        <h1>Adventures.<br><span>Off Road</span></h1>
+        <p>Spending time outdoors reduces stress.
+            Nature makes exercise easier.
+            Nature can rejuvenate your soul.
+            Gain a sense of accomplishment.
+            Travel increases your self-awareness.
+            The outdoors can make you smarter.
+            Forge new friendships.
+            Learn new skills.</p>
+        <a href="https://worldexpeditions.com/blog/9-reasons-adventure-travel-is-good-for-you">Read More</a>
+      </div>
+      <div class="content">
+        <h1>Road Trip.<br><span>Together</span></h1>
+        <p>Most people have at some point fantasized about heading out on a that epic adventure-filled road trip across the country. There are a lot of ways to make this dream a reality and in my time on the road</p>
+        <a href="https://www.theoutbound.com/hb-mertz/8-reasons-why-you-should-road-trip-across-the-country">Read More</a>
+      </div>
+      <div class="content">
+        <h1>Feel Nature.<br><span>Relax</span></h1>
+        <p>Nature heals, Nature soothes, Nature restores, Nature connects, </p>
+        <a href="https://www.takingcharge.csh.umn.edu/how-does-nature-impact-our-wellbeing">Read More</a>
+      </div>
+      <div class="media-icons">
+        <a href="https://en-gb.facebook.com/Island-tourism-563798144103333/"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/explore/tags/island/?hl=en"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com/blockislandinfo"><i class="fab fa-twitter"></i></a>
+      </div>
+      <div class="slider-navigation">
+        <div class="nav-btn active"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+      </div>
+    </section>
+
+    <script type="text/javascript">
+    //Javacript for responsive navigation menu
+    const menuBtn = document.querySelector(".menu-btn");
+    const navigation = document.querySelector(".navigation");
+
+    menuBtn.addEventListener("click", () => {
+      menuBtn.classList.toggle("active");
+      navigation.classList.toggle("active");
+    });
+
+    //Javacript for video slider navigation
+    const btns = document.querySelectorAll(".nav-btn");
+    const slides = document.querySelectorAll(".video-slide");
+    const contents = document.querySelectorAll(".content");
+
+    var sliderNav = function(manual){
+      btns.forEach((btn) => {
+        btn.classList.remove("active");
+      });
+
+      slides.forEach((slide) => {
+        slide.classList.remove("active");
+      });
+
+      contents.forEach((content) => {
+        content.classList.remove("active");
+      });
+
+      btns[manual].classList.add("active");
+      slides[manual].classList.add("active");
+      contents[manual].classList.add("active");
+    }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        sliderNav(i);
+      });
+    });
+    </script>
+
+  </body>
+</html>
+      
